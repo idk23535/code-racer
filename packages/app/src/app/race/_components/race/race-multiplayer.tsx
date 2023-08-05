@@ -70,8 +70,8 @@ export default function RaceMultiplayer({
   const [submittingResults, setSubmittingResults] = useState(false);
   const [totalErrors, setTotalErrors] = useState(0);
 
-  const snippetTitle = snippet?.name === "undefined" ? "Type this code"
-         : "Type " + " Snippet " + snippet?.name
+  const snippetTitle = snippet?.name ? "Type " + " Snippet " 
+  + snippet?.name : "Type this code"
 
   const [chartTimeStamp, setChartTimeStamp] = useState<ChartTimeStamp[]>([]);
   const [replayTimeStamp, setReplayTimeStamp] = useState<ReplayTimeStamp[]>([]);
